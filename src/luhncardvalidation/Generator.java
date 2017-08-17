@@ -15,11 +15,11 @@ public class Generator {
 
     public static long generate(boolean b) {
         long rndCardNumber = 0;
-        Random rnd = new Random();
-        String rndCardNumberString = rndCardNumber + "";
+        Random rnd = new Random();      
         while (!Validator.isValid(rndCardNumber)) {
             rndCardNumber = rnd.nextLong();
         }
+        String rndCardNumberString = rndCardNumber + "";
         if (!b) {
             int i = rnd.nextInt(3);
             switch (i) {
